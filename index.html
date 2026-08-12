@@ -18,7 +18,7 @@
 
         document.getElementById("parseAndView").onclick = () => {
             const content = input.value;
-            const parsedContent = content.replaceAll(`\\n`, ``).replaceAll(`\\"`, `"`);
+            const parsedContent = content.replaceAll(`\\n`, ``).replaceAll(`\\r`, ``).replaceAll(`\\"`, `"`);
             console.warn({ parsedContent });
             outputDiv.innerHTML = parsedContent;
         }
